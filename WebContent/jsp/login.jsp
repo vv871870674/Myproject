@@ -5,225 +5,132 @@ String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<title>登录_改版蘑菇街</title>
-	<!-- <meta name="viewport" content="width=divice-width,initial-scale=1.0,minimum-scale=1.0,maximum=1.0,user-scalable=no" /> -->
-	<meta http-equiv=X-UA-Compatible content=IE=8/>
-	<link rel="stylesheet" href="<%=basePath%>css/normalize.css" type="text/css" />
-	<link rel="stylesheet" href="<%=basePath%>css/font-awesome.min.css" type="text/css" />
-	<link rel="stylesheet" href="<%=basePath%>css/bootstrap.css"type="text/css"/>
-	<link rel="stylesheet" href="<%=basePath%>css/login.css" type="text/css" />
+	<meta name='TTUNION_verify' content='b846c3c2b85efabc496d2a2b8399cd62'>
+	<meta name="sogou_site_verification" content="gI1bINaJcL"/>
+	<meta name="360-site-verification" content="37ae9186443cc6e270d8a52943cd3c5a"/>
+	<meta name="baidu_union_verify" content="99203948fbfbb64534dbe0f030cbe817">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE;chrome=1">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="一点车 -  让您多懂一点车,一点车，让您多懂一点车的常识，在这里，您会看到汽车相关的知识，汽车日常保养，汽车多用小知识，汽车简单维修以及清洗保养等等。">
+	<meta name="description" content="一点车 -  让您多懂一点车,一点车，让您多懂一点车的常识，在这里，您会看到汽车相关的知识，汽车日常保养，汽车多用小知识，汽车简单维修以及清洗保养等等。。">
+	<meta name="author" content="AUI, a-ui.com">
+	<meta name="baidu-site-verification" content="ZVPGgtpUfW"/>
+	<title>帐号状态 -- 一点车 -  让您多懂一点车</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+	<link type="text/css" rel="stylesheet" href="<%=basePath%>admin/css/core.css">
+	<link type="text/css" rel="stylesheet" href="<%=basePath%>admin/css/icon.css">
+	<link type="text/css" rel="stylesheet" href="<%=basePath%>admin/css/home.css">
 
-	<!-- <script src="./js/jquery-1.7.2.js"></script> -->
-	<script src="<%=basePath%>js/jquery-1.11.3.js"></script>
-	<script src="<%=basePath%>js/bootstrap.min.js"></script>
 
 </head>
 <body>
-	<div class="wrap"id="wrap">
-		<div class="logo" id="logo">
-			<a href="#">
-				<img src="<%=basePath%>images/mogulogo_220x52.png" alt="该链接已失效">
+
+<div class="ydc-body-content">
+	<div class="ydc-body-bj">
+		<div class="ydc-body-logo">
+			<a href="login.html">
+				<img src="<%=basePath%>admin/images/icon/ydc-logo.png" alt="">
 			</a>
 		</div>
-		<div class="register-wrap" id="register-wrap">
-			<div class="pic" id="pic">
-				<img src="<%=basePath%>images/zhuce_400x300.jpg" alt="该链接已失效"/>
-			</div>
-			<div class="register"id="register">
-				<div class="register-top" id="reg-top">
-					<h2 class="normal"id="normal">普通登录</h2>
-					<h2 class="nopassword"id="nopw">手机无密码登录</h2>
-					<a  id="qrcode"href="#"></a>
-				</div>
+		<div class="ydc-body-login">
+			<h2>登录</h2>
+			<div class="ydc-body-login-content">
+				<form action="<%=basePath%>user/login.action"name="myform" method="post">
+					<div class="ydc-body-login-box">
+						<div class="ydc-user-img">
+							<div class="ydc-user-img-img"><img src="admin/images/icon/ph.png" alt=""></div>
+						</div>
+						<div class="ydc-user-border">
+							<input type="email" name="userAccount" id="userAccount" data-type="email" placeholder="请输入邮箱账号">
+						</div>
+					</div>
+					<div class="ydc-body-login-box">
+						<div class="ydc-user-img">
+							<div class="ydc-user-img-img"><img src="<%=basePath%>admin/images/icon/pad.png" alt=""></div>
+						</div>
+						<div class="ydc-user-border">
+							<input type="password" name="userPwd" id="userPwd" data-type="password" placeholder="密码">
+						</div>
+					</div>
+					<div class="ydc-bod-aq">
+						<p>为了您的账号安全，请勿在公共电脑登录</p>
+					</div>
+					<div class="clearfix">
+						<div class="fl">
+							<input type="checkbox" checked="checked">
+							<label>十天内免登录</label>
+						</div>
+						<div class="fr">
+							<a href="#">忘记密码</a>
+						</div>
+					</div>
+					<div class="ydc-body-submit">
+					
+						<a href="javascript:document.myform.submit();">登录</a>
+					</div>
+					<div class="ydc-login-box">
 
-				<!--普通登录-->
-				<div class="register-con" id="rc">
-					<form action="#">
-						<ul>
-							<li id="rc-inner-num">
-							<i></i>
-							<span>请输入昵称/邮箱/手机号码</span>
-							</li>
-							<li id="rc-inner-virity">
-								<i></i>
-								<span>请输入密码</span>
-							</li>
-							<li id="rc-innerError"style="width:300px;
-								height:32px;
-								padding:0 6px;
-								color:#ff1877;
-								border:1px solid #ffd797;
-								display:none;">
-								<i style="display:inline-block;
-									float:left;
-									width:20px;
-									height:20px;
-									margin:6px 10px;
-									border:none;
-									background:url(<%=basePath%>images/bz_16x16.png) no-repeat 0 0;"></i>
-								<span style="color:#ff1877;
-								display:inline-block;
-								float:left;
-								line-height:26px;">您输入的用户名或密码不正确</span>
-							</li>
-							<li class="form-group">
-								<input type="text"name="phone-num"class="form-control"placeholder="昵称/邮箱/手机号码"/>
-								<span class="fa fa-check success" style="display:none;color:green;position:relative;left:-25px;top:5px;"></span>
-								
-							</li>
-							<li class="form-group">
-								<input type="password"name="password"id="pass"class="form-control"placeholder="密码"/>
-								
-							</li>
-							<li class="read">
-								<input type="checkbox" class="ck" name="check"value="1"checked="checked"/>
-								<b>2周内自动登录</b>
-								<a href="#">忘记密码？</a>
-							</li>
-							<li>
-								<button class="submit"type="submit"id="login-btn"style="border-radius:5px;">立即登录</button>
-							</li>
-							<li>
-								<a href="<%=basePath%>jsp/go-reg.jsp">新用户注册</a>
-							</li>
-							<li class="zjdl">
-								无需注册即可登录：
-							</li>
-							<li>
-								<div class="qq"style="border-radius:5px;"></div>
-								<div class="weixin"style="border-radius:5px;"></div>
-								<div class="weibo"style="border-radius:5px;"></div>
-							</li>
-						</ul>
-					</form>	
-				</div>
-				<!--手机无密码登录-->
-				<div class="login-con" id="lc">
-					<form action="#">
-					<ul>
-						<li id="inner-num">
-							<i></i>
-							<span>请输入手机号码</span>
-						</li>
-						<li id="inner-virity">
-							<i></i>
-							<span>请输入验证码</span>
-						</li>
-						<li class="lg-num  form-group">
-							<select name="country" id="country"class="info-select"style="border-radius:5px;">
-								<option value="中国">中国</option>
-							</select>
-							<input type="text"name="phone-num"class="form-control"placeholder="手机号码"/>	
-							<span class="fa fa-check success" style="display:none;color:green;position:relative;left:-25px;top:5px;"></span>
-						</li>
-						<li class="password form-group">
-							<input type="password"name="password"id="pass"class="form-control"placeholder="动态密码"/>
-							
-						</li>
-						<li>
-							<button class="getcode"id="getcode"style="border-radius:5px;">获取手机动态密码</button>
-						</li>
-						<li class="read">
-							<input type="checkbox" class="ck" name="check"value="1"checked="checked"/>
-							<b>2周内自动登录</b>
-							<a href="#">忘记密码？</a>
-						</li>
-						
-						<li>
-							<button class="submit"type="submit"id="login-btn1"style="border-radius:5px;">登录</button>
-						</li>
-						<li>
-							<a href="#" class="haiwai">海外手机登录</a>
-							<a href="#"class="zhuce">新用户注册</a>
-						</li>
-						<li class="zjdl">
-							无需注册即可登录：
-						</li>
-						<li>
-							<div class="qq"style="border-radius:5px;"></div>
-							<div class="weixin"style="border-radius:5px;"></div>
-							<div class="weibo"style="border-radius:5px;"></div>
-						</li>
-					</ul>
-				</form>	
-				</div>
-				<!-- 扫码登录 -->
-				<div class="saoma" id="sm">
-					<div class="screen-tu"id="screen"></div>
-					<div class="saoyisao"></div>
-					<div class="qr-code">
-						<img src="<%=basePath%>images/ereima_202x202.png" alt="">
+						<a href="go-reg.html" target="_blank">立即注册</a>
+						<span>|</span>
+						<a href="customer.html" target="_blank">常见问题</a>
+
 					</div>
-					<div class="link">
-						<a href="#">点击下载蘑菇街APP</a>
-					</div>
-				</div>
+				</form>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="ydc-footer-news">
+		<div class="ydc-footer">
+			<div>
+				<p>©2018 一点车版权所有About 公司简介  联系方法  招聘信息  客户服务  隐私政策  广告服务  网站地图  意见反馈  不良信息举报</p>
 			</div>
 		</div>
 	</div>
-	<div class="footer">
-		<div class="footer-wrap">
-			<div class="footer-wrap-top">
-				<div class="footer-wrap-top-left">
-					<dl>
-						<dt>新手帮助</dt>
-						<dd>
-							<a href=""> 如何购买</a>
-						</dd>
-						<dd>
-							<a href="">支付教程</a>
-						</dd>
-						<dd>
-						<a href="">优惠券使用</a>
-						</dd>
-						<dd>
-						<a href="">常见问题</a>
-						</dd>
-					</dl>
-					<dl class="bz">
-						<dt>权益保障</dt>
-						<dd>
-						<a href="">全国包邮</a>
-						</dd>
-						<dd>
-						<a href="">7天无理由退货</a>
-						</dd>
-						<dd>
-						<a href="">退货运费补贴</a>
-						</dd>
-						<dd>
-						<a href="">72小时发货</a>
-						</dd>
-					</dl>
-					<dl>
-						<dt> 商家服务</dt>
-						<dd>
-						<a href="">免费开店</a>
-						</dd>
-						<dd>
-						<a href=""> 商家社区</a>
-						</dd>
-						<dd>
-						<a href="">商家入驻</a>
-						</dd>
-						<dd>
-						<a href="">管理后台</a>
-						</dd>
-					</dl>
-				</div>
-				<div class="footer-wrap-top-right">
-					<h2>蘑菇街移动客户端</h2>
-					<img src="<%=basePath%>images/erweima_180x76.png" alt="该链接已失效">
-				</div>
-			</div>
-			<div class="footer-bottom">
-				©Copyright 2010-2016蘑菇街 Mogujie.com (增值电信业务经营许可证：浙B2-20110349)			
-			</div>
-		</div>
-	</div>
-	<script src="<%=basePath%>js/login.js"></script>
+</div>
+
+<!-- head YDC begin -->
+<!-- head YDC end -->
+
+<!-- content YDC begin -->
+<!-- content YDC end -->
+
+	<script type="text/javascript" src="<%=basePath%>admin/js/jquery.min.js"></script>
+	<script type="text/javascript">
+	    var slideIndex = 0;
+	    showSlides();
+
+	    function showSlides() {
+	        var i;
+	        var slides = document.getElementsByClassName("mySlides");
+	        for (i = 0; i < slides.length; i++) {
+	            slides[i].style.display = "none";
+	        }
+	        slideIndex++;
+	        if (slideIndex> slides.length) {slideIndex = 1}
+	        slides[slideIndex-1].style.display = "block";
+	        setTimeout(showSlides, 3000); // 滚动时间
+	    }
+	</script>
+
+	<script type="text/javascript">
+	    $(function(){
+	        $('.ydc-tabPanel ul li').click(function(){
+	            $(this).addClass('hit').siblings().removeClass('hit');
+	            $('.ydc-panes>div:eq('+$(this).index()+')').show().siblings().hide();
+	        })
+	    })
+	</script>
+
 </body>
 </html>
