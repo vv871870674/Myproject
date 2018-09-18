@@ -9,7 +9,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>众包服务平台</title>
-	<link rel="stylesheet" href="css/oindex.css">
+	<link rel="stylesheet" href="<%=path%>css/oindex.css">
 	<script type="text/javascript" src="<%=path%>js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="<%=path%>js/jquery.superslide.2.1.1.js"></script>
 </head>
@@ -36,10 +36,10 @@
 			<div clear></div>
 			<div class="head-muild">
 				<div class="width1180">
-					 <h1 class="fl"><img src="images/logo.png"></h1> 
+					 <h1 class="fl"><img src="<%=path%>images/logo.png"></h1> 
 					<div class="o-search">
 						<form>
-							<input type="text" class="search-text"  placeholder="请输入您搜索的关键词"><button class="search-bnt"><img src="images/search-i.png">  搜索</button>
+							<input type="text" class="search-text"  placeholder="请输入您搜索的关键词"><button class="search-bnt"><img src="<%=path%>images/search-i.png">  搜索</button>
 						</form>
 					</div>
 					<!-- <div class="fl search-keywords">
@@ -50,13 +50,13 @@
 						<div class="fenlei-nav fl">用户操作</div>
 						<ul class="fl">
 							<li><a href="index.html" title="首页" class="on">首页</a></li>
-							<li><a href="#" title="最新需求">最新需求<img src="images/hot.gif"></a></li>
-							<li><a href="#" title="最新作品">最新作品<img src="images/hot.gif"></a></li>
+							<li><a href="#" title="最新需求">最新需求<img src="<%=path%>images/hot.gif"></a></li>
+							<li><a href="#" title="最新作品">最新作品<img src="<%=path%>images/hot.gif"></a></li>
 							<li><a href="#" title="曝光台">曝光台</a></li>
 							<li><a href="#" title="信用查询">信用查询</a></li>
 							<li><a href="#" title="规则介绍">规则介绍</a></li>
 							<li><a href="#" title="关于我们">关于我们</a></li>
-							<span class="fr"><img src="images/o-tel.gif"></span>
+							<span class="fr"><img src="<%=path%>images/o-tel.gif"></span>
 						</ul>
 					</nav>
 				</div>
@@ -346,13 +346,13 @@
 					<div class="qianhong-b">
 				    	<ul class="qianhongpic" style="position: relative; width: 1920px; height: 460px;">
 				            <li style="position: absolute; width: 708px; left: 0px; top: 0px; display: list-item;"><a href="#" title="">
-								<img src="images/oindex-banner.png">
+								<img src="<%=path%>images/oindex-banner.png">
 				            </a></li>
 				            <li style="position: absolute; width: 708px; left: 0px; top: 0px; display: list-item;"><a href="#" title="">
-								<img src="images/oindex-banner2.png">
+								<img src="<%=path%>images/oindex-banner2.png">
 				            </a></li>
 				            <li style="position: absolute; width: 708px; left: 0px; top: 0px; display: list-item;"><a href="#" title="">
-								<img src="images/oindex-banner3.png">
+								<img src="<%=path%>images/oindex-banner3.png">
 				            </a></li>
 				        </ul>
 				        <a class="prev" href="javascript:void(0)" style="opacity: 0.07474937499999999; display: none;"></a>
@@ -364,7 +364,7 @@
 
                     </div>
                     <div class="banner-li">
-						<img src="images/oindex-1.png"><img src="images/oindex-2.png" class="fr">
+						<img src="<%=path%>images/oindex-1.png"><img src="<%=path%>images/oindex-2.png" class="fr">
                     </div>
 <script>
 /*鼠标移过，左右按钮显示*/
@@ -386,7 +386,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 <!--右边-->
 					<div class="banner-right">
 						<div class="user-box">
-							<img src="images/banner-touxiang.png">
+							<img src="<%=path%>images/banner-touxiang.png">
 							<p>hi,您好！</p>
 							<a href="#" title="" class="b-login">登录</a><a href="#" title="" class="b-regist">注册</a>
 							<!--登录之后-->
@@ -438,7 +438,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 					<p class="t-price">¥588起<i>¥588起</i></p>
 					<a href="#" title="立即购买">立即购买</a>
 				</div>
-				<div class="tuijian-img fl"><img src="images/oindex-20.png"></div>
+				<div class="tuijian-img fl"><img src="<%=path%>images/oindex-20.png"></div>
 			</li>
 			<li>
 				<div class="tuijian-text">
@@ -447,7 +447,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 					<p class="t-price">¥3600起<i>¥4000起</i></p>
 					<a href="#" title="立即购买">立即购买</a>
 				</div>
-				<div class="tuijian-img fl"><img src="images/oindex-21.png"></div>
+				<div class="tuijian-img fl"><img src="<%=path%>images/oindex-21.png"></div>
 			</li>
 			<li>
 				<div class="tuijian-text">
@@ -456,7 +456,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 					<p class="t-price">¥3500起<i>¥4000起</i></p>
 					<a href="#" title="立即购买">立即购买</a>
 				</div>
-				<div class="tuijian-img fl"><img src="images/oindex-23.png"></div>
+				<div class="tuijian-img fl"><img src="<%=path%>images/oindex-23.png"></div>
 			</li>
 		</ul>
 	</div>
@@ -539,7 +539,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 		</div>
 	</div> -->
 	<!--工商服务-->
-	<div class="fuw-advance width1180"><img src="images/oindex-16.png"></div>
+	<div class="fuw-advance width1180"><img src="<%=path%>images/oindex-16.png"></div>
 	<!--知识产权-->
 	<div class="zhishicq-box width1180">
 		<div class="o-indexttitle">
@@ -555,14 +555,14 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 							<a href="#" title=""><span class="s-line">商品服务</span><span>商标注册</span>
 							<p class="color666">不成功，退全款 </p>
 							<p class=" colorred">￥2100起</p>
-							<img src="images/oindex-10.png">
+							<img src="<%=path%>images/oindex-10.png">
 							</a>
 						</li>
 						<li>
 							<a href="#" title=""><span class="s-line">商标注册</span><span>包通过</span>
 							<p class="color666">98%通过率 </p>
 							<p class=" colorred">￥1500起</p>
-							<img src="images/oindex-11.png">
+							<img src="<%=path%>images/oindex-11.png">
 
 							</a>
 						</li>
@@ -570,14 +570,14 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 							<a href="#" title=""><span class="s-line">专利申请</span>
 							<p class="color666">快速响应，1对1服务 </p>
 							<p class=" colorred">￥2100起</p>
-							<img src="images/oindex-12.png">
+							<img src="<%=path%>images/oindex-12.png">
 							</a>
 						</li>
 						<li>
 							<a href="#" title=""><span class="s-line">美术作品</span><span>登记</span>
 							<p class="color666">快申报，高通过 </p>
 							<p class=" colorred">￥1000起</p>
-							<img src="images/oindex-13.png">
+							<img src="<%=path%>images/oindex-13.png">
 							</a>
 						</li>
 					</ul>
@@ -623,7 +623,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 		<div class="width1180">
 			<ul>
 				<li>
-					<img src="images/144224541.jpg" alt="陈经理">
+					<img src="<%=path%>images/144224541.jpg" alt="陈经理">
 					<p class="team-name">易广生</p>
 					<p class="fontsize16">软件开发</p>
 					<div class="team-desert">
@@ -634,7 +634,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 					</div>
 				</li>
 				<li>
-					<img src="images/181252981.jpg" alt="陈经理">
+					<img src="<%=path%>images/181252981.jpg" alt="陈经理">
 					<p class="team-name">陈先生</p>
 					<p class="fontsize16">前端设计</p>
 					<div class="team-desert">
@@ -645,7 +645,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 					</div>
 				</li>
 				<li>
-					<img src="images/175321551.jpg" alt="陈经理">
+					<img src="<%=path%>images/175321551.jpg" alt="陈经理">
 					<p class="team-name">谢小姐</p>
 					<p class="fontsize16">美工</p>
 					<div class="team-desert">
@@ -819,16 +819,16 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 		</div>
 		<div class="clearfix"></div>
 		<ul>
-			<li><img src="images/join-hz_01.png"></li>
-			<li><img src="images/join-hz_03.png"></li>
-			<li><img src="images/join-hz_04.png"></li>
-			<li><img src="images/join-hz_06.png"></li>
-			<li><img src="images/join-hz_08.png"></li>
-			<li><img src="images/join-hz_16.png"></li>
-			<li><img src="images/join-hz_17.png"></li>
-			<li><img src="images/join-hz_18.png"></li>
-			<li><img src="images/join-hz_19.png"></li>
-			<li><img src="images/join-hz_20.png"></li>
+			<li><img src="<%=path%>images/join-hz_01.png"></li>
+			<li><img src="<%=path%>images/join-hz_03.png"></li>
+			<li><img src="<%=path%>images/join-hz_04.png"></li>
+			<li><img src="<%=path%>images/join-hz_06.png"></li>
+			<li><img src="<%=path%>images/join-hz_08.png"></li>
+			<li><img src="<%=path%>images/join-hz_16.png"></li>
+			<li><img src="<%=path%>images/join-hz_17.png"></li>
+			<li><img src="<%=path%>images/join-hz_18.png"></li>
+			<li><img src="<%=path%>images/join-hz_19.png"></li>
+			<li><img src="<%=path%>images/join-hz_20.png"></li>
 		</ul>
 
 	</div>
@@ -910,7 +910,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 		<!-- <div class="clearfix"></div> -->
 		<div class="foot-b">
 			<div class="width1180">
-				<span class="fl">CopyRight@2001-2018 众包一站式服务 湘ICP备15004606号-11</span> <img src="images/k8008_B3_Top001.gif"><img src="images/k8008_B3_Top008.gif"><img src="images/k8008_B3_Top009.gif"><img src="images/k8008_B3_Top010.gif">
+				<span class="fl">CopyRight@2001-2018 众包一站式服务 湘ICP备15004606号-11</span> <img src="<%=path%>images/k8008_B3_Top001.gif"><img src="<%=path%>images/k8008_B3_Top008.gif"><img src="<%=path%>images/k8008_B3_Top009.gif"><img src="<%=path%>images/k8008_B3_Top010.gif">
 			</div>
 		</div>
 	</footer>
