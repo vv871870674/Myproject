@@ -1,5 +1,5 @@
 package org.great.mapper;
 
-public class UserMapper {
+public interface UserMapper {
 
 }

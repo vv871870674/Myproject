@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <% 
@@ -405,11 +406,14 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 						<div class="banner-anli">
 							<p>成功交易&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">更多</a></p>
 							<ul>
-								<li><a href="#" title="">与长沙宏志贸易有限公司成功签</a></li>
+							<c:forEach items="${fundlist}"  var="fund">
+								<li><a href="#" title=""></a></li>
+							</c:forEach>
+								<!-- <li><a href="#" title="">与长沙宏志贸易有限公司成功签</a></li>
 								<li><a href="#" title="">湘潭市岳塘区方正摩配商行签约...</a></li>
 								<li><a href="#" title="">首次签约长沙蒂芬美容服务有限公司</a></li>
 								<li><a href="#" title="">与鄢总签订公司注册、代理记账合同</a></li>
-								<li><a href="#" title="">客户肖总成功签订公司注册合同</a></li>
+								<li><a href="#" title="">客户肖总成功签订公司注册合同</a></li> -->
 							</ul>
 						</div>
 					</div>
