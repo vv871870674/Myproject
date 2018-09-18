@@ -395,12 +395,27 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 						</div>
 						<div class="banner-baoz">
 							<p>全程服务无忧保障</p>
+
 							<ul>
-								<li class="fl"><img src="images/b-01.png">价格透明</li>
+								<li class="fl"><img src="<%=path%>images/b-01.png">价格透明</li>
+								<li class="fr"><img src="<%=path%>images/b-02.png">安全保障</li>
+								<li class="fl"><img src="<%=path%>images/b-03.png">准时保质</li>
+								<li class="fr"><img src="<%=path%>images/b-04.png">售后无忧</li>
+							</ul>
+						</div>
+						<div class="clearfix"></div>
+						<div class="banner-anli">
+							<p>成功交易&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="fund/getFundList.action?page=1">更多</a></p>
+							<ul>
+							<c:forEach items="${fundList}"  var="fund">
+								<li><a href="#" title="">${fund.dealDate}&nbsp;&nbsp;&nbsp;${fund.userBean.userName}&nbsp;&nbsp;&nbsp;成功交易</a></li>
+							</c:forEach>
+								<!-- <li class="fl"><img src="images/b-01.png">价格透明</li>
 								<li class="fr"><img src="images/b-02.png">安全保障</li>
 								<li class="fl"><img src="images/b-03.png">准时保质</li>
-								<li class="fr"><img src="images/b-04.png">售后无忧</li>
+								<li class="fr"><img src="images/b-04.png">售后无忧</li> -->
 							</ul>
+						</div>							
 						</div>
 						<div class="clearfix"></div>
 						<div class="banner-anli">
@@ -416,6 +431,7 @@ $(".qianhong-b").slide({ titCell:".num ul" , mainCell:".qianhongpic" , effect:"f
 								<li><a href="#" title="">客户肖总成功签订公司注册合同</a></li> -->
 							</ul>
 						</div>
+>>>>>>> branch 'master' of https://github.com/vv871870674/Myproject.git
 					</div>
 				<!--右边-->
 				</div>

@@ -10,6 +10,9 @@ private String dealDate;
 private int businessId;
 private int toUserId;
 private float dealMoney;
+private UserBean userBean;
+private UserBean toUserBean;
+private BusinessBean businessBean;
 public FundBean() {
 	super();
 }
@@ -59,6 +62,30 @@ public float getDealMoney() {
 }
 public void setDealMoney(float dealMoney) {
 	this.dealMoney = dealMoney;
+}
+
+public UserBean getUserBean() {
+	return userBean;
+}
+
+public void setUserBean(UserBean userBean) {
+	this.userBean = userBean;
+}
+
+public BusinessBean getBusinessBean() {
+	return businessBean;
+}
+
+public void setBusinessBean(BusinessBean businessBean) {
+	this.businessBean = businessBean;
+}
+
+public UserBean getToUserBean() {
+	return toUserBean;
+}
+
+public void setToUserBean(UserBean toUserBean) {
+	this.toUserBean = toUserBean;
 }
 
 }

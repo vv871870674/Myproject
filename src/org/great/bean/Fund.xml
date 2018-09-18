@@ -1,11 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN" 
 "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
-<mapper namespace="org.great.mapper.UserMapper">
+<mapper namespace="org.great.mapper.FundMapper">
 	
-<select id="getFundList" 
-parameterType="org.great.mapper.FundMapper">
-select * from fundtbl
+<select id="getFundList" resultMap="fundList">
+select * from(select t.*,rownum rn from(select * from fundtbl order by dealdate desc)t where rownum &lt; = #{end}) where rn &gt; = #{start}
 </select>
-	 
+<select id="getUserInfo" parameterType="org.great.bean.FundBean" resultType="org.great.bean.UserBean">
+select * from usertbl where userid = #{userid}
+</select>
+<select id="getToUserInfo" parameterType="org.great.bean.FundBean" resultType="org.great.bean.UserBean">
+select * from usertbl where userid = #{touserid}
+</select>
+<select id="getBusinessInfo" parameterType="org.great.bean.FundBean" resultType="org.great.bean.BusinessBean">
+select * from businesstbl where businessId = #{businessid}
+</select>	
+<resultMap type="org.great.bean.FundBean" id="fundList">
+<association property="userBean" column="userid"  javaType="org.great.bean.UserBean" select="getUserInfo">
+</association>
+<association property="toUserBean" column="touserid"  javaType="org.great.bean.UserBean" select="getToUserInfo">
+</association>
+<association property="businessBean" column="businessid"  javaType="org.great.bean.BusinessBean" select="getBusinessInfo">
+</association>
+</resultMap>	 
 </mapper>

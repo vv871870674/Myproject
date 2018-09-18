@@ -1,5 +1,9 @@
 package org.great.biz;
 
-public interface FundBiz {
+import java.util.List;
 
+import org.great.bean.FundBean;
+
+public interface FundBiz {
+	public List<FundBean> getFundList(String page);
 }

@@ -11,7 +11,9 @@ import org.springframework.stereotype.Service;
 public class FundBizImp implements FundBiz{
 @Resource
 private FundMapper fundMapper;
-public List<FundBean> getFundList(){
-	return fundMapper.getFundList();
+public List<FundBean> getFundList(String page){
+	int end=5*Integer.parseInt(page);
+	int start=end-4;
+	return fundMapper.getFundList(end,start);
 }
 }
