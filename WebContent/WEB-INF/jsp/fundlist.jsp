@@ -89,7 +89,7 @@
 												<th>交易金额</th>
 											</tr>
 										</thead>
-										<tbody>
+										<tbody id="tb">
 									<c:forEach items="${fundList}"  var="fund">
 									<tr>
 												<td>${fund.userBean.userName}</td>
@@ -105,7 +105,7 @@
 								<div class="ydc-pagination">
 									<ol>
 										<li class="ydc-previous-item">
-											<button class="ydc-previous-item-btn-medium ydc-disabled">
+											<button class="ydc-previous-item-btn-medium ydc-disabled" onclick="selectFund('last')" id="last">
 												<span>上一页</span>
 											</button>
 										</li>
@@ -118,8 +118,9 @@
 										<li>
 											<button class="ydc-previous-item-btn-medium">3</button>
 										</li> -->
+										<li id="l1">${requestScope.page}/${requestScope.countPage}</li>
 										<li class="ydc-previous-item">
-											<button class="ydc-previous-item-btn-medium">
+											<button class="ydc-previous-item-btn-medium" onclick="selectFund('next')" id="next">
 												<span>下一页</span>
 											</button>
 										</li>
@@ -180,7 +181,42 @@
 	            $('.ydc-panes>div:eq('+$(this).index()+')').show().siblings().hide();
 	        })
 	    })
-	</script>
+	    
+
+function selectFund(state){
+    var page="${requestScope.page}";
+	$("#tb").empty();	
+	$.ajax({	
+		 url:"<%=path%>fund/selectFund.action",
+		 data:"state="+state+"&page="+page,
+		 dataType:"json",
+		 type:"post",
+		 success:function(redata){
+			   		page=redata[0];
+			   	 var list=redata[1];
+		         var len = list.length;
+		         var size=redata[2];
+		         for(var i=0;i<len;i++){    			        	 
+		             var e = list[i];
+		             $("#tb").append("<tr><td>"+e.userBean.userName+"</td><td>"+e.dealDate+"</td><td>"+e.businessBean.businessName+"</td><td>"+e.toUserBean.userName+"</td><td>"+e.dealMoney+"</td></tr>"); 
+		         } 	
+		         if(page==1){
+		        	 $("#last").attr("class","ydc-previous-item-btn-medium ydc-disabled"); 
+		         }else{
+		        	 $("#last").attr("class","ydc-previous-item-btn-medium");
+		         }
+		         if(page==size){
+		        	 $("#next").attr("class","ydc-previous-item-btn-medium ydc-disabled");
+		         }else{
+		        	 $("#next").attr("class","ydc-previous-item-btn-medium");
+		         }
+		         $("#l1").html(page+"/"+size);
+		         
+		 }
+	 }); 
+    	
+}
+</script>
 
 </body>
 </html>

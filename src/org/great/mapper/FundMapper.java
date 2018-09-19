@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface FundMapper {
 public List<FundBean> getFundList(@Param("end")int end,@Param("start")int start);
-	
+public List<FundBean> getFundNumber();	
 }
